@@ -117,30 +117,30 @@
  * return value.
  */
 
-// function calculateTotal(luckyNumber, total) {
-//     let discountedPrice;
-//     if (luckyNumber === 0) {
-//         discountedPrice = total;
-//     } else if (luckyNumber === 1) {
-//         discountedPrice = total - (total * .1);
-//     } else if (luckyNumber === 2) {
-//         discountedPrice = total - (total * .25);
-//     } else if (luckyNumber === 3) {
-//         discountedPrice = total - (total * .35);
-//     } else if (luckyNumber === 4) {
-//         discountedPrice = total - (total * .5);
-//     } else if (luckyNumber === 5) {
-//         discountedPrice = total - (total * .5);
-//     }
-//
-//     return discountedPrice;
-// }
-//
-// console.log(calculateTotal(1,100));
-// console.log(calculateTotal(2,100));
-// console.log(calculateTotal(3,100));
-// console.log(calculateTotal(4,100));
-// console.log(calculateTotal(5,100));
+function calculateTotal(luckyNumber, total) {
+    let discountedPrice;
+    if (luckyNumber === 0) {
+        discountedPrice = total;
+    } else if (luckyNumber === 1) {
+        discountedPrice = total - (total * .1);
+    } else if (luckyNumber === 2) {
+        discountedPrice = total - (total * .25);
+    } else if (luckyNumber === 3) {
+        discountedPrice = total - (total * .35);
+    } else if (luckyNumber === 4) {
+        discountedPrice = total - (total * .5);
+    } else if (luckyNumber === 5) {
+        discountedPrice = total - (total * .5);
+    }
+
+    return discountedPrice;
+}
+
+console.log(calculateTotal(1,100));
+console.log(calculateTotal(2,100));
+console.log(calculateTotal(3,100));
+console.log(calculateTotal(4,100));
+console.log(calculateTotal(5,100));
 
 // let discountedPrice;
 // let luckyNumbers = ['0','1','2','3','4','5'];
@@ -235,42 +235,42 @@
 //    }
 // }
 
-function promptUser(){
-
-
-}
-
-function isEven(){
-
-}
-
-
-
-
-
-if(confirm("would you like to enter a number?")){
-    let pickedNumber = parseInt(prompt('Please enter a number'));
-    console.log(typeof userInput);
-
-    if(!isNaN(pickedNumber)) {
-
-
-        if (pickedNumber % 2 === 0) {
-            alert(pickedNumber + ' is even.');
-        } else {
-            alert(pickedNumber + ' is odd.');
-        }
-
-        alert('Your number + 100 = ' + (pickedNumber + 100));
-
-        if (pickedNumber > 0) {
-            alert('Your number is positive');
-        } else {
-            alert('Your number is negative');
-        }
-
-    } else {
-        alert("Yout did not enter a number. Please enter a number next time");
-    }
-}
+// function promptUser(){
+//
+//
+// }
+//
+// function isEven(){
+//
+// }
+//
+//
+//
+//
+//
+// if(confirm("would you like to enter a number?")){
+//     let pickedNumber = parseInt(prompt('Please enter a number'));
+//     console.log(typeof userInput);
+//
+//     if(!isNaN(pickedNumber)) {
+//
+//
+//         if (pickedNumber % 2 === 0) {
+//             alert(pickedNumber + ' is even.');
+//         } else {
+//             alert(pickedNumber + ' is odd.');
+//         }
+//
+//         alert('Your number + 100 = ' + (pickedNumber + 100));
+//
+//         if (pickedNumber > 0) {
+//             alert('Your number is positive');
+//         } else {
+//             alert('Your number is negative');
+//         }
+//
+//     } else {
+//         alert("Yout did not enter a number. Please enter a number next time");
+//     }
+// }
 
