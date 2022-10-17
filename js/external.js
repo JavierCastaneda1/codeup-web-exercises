@@ -12,6 +12,7 @@ let userInput = prompt("What is your favorite color?");
 alert("Great, " +userInput+ " is my favorite color too!");
 
 //exercise 3
+//part 1 (movies question)
 
 let userPick = prompt("How many days would you like to rent The Little Mermaid?");
 console.log("The user entered: "+userPick);
@@ -25,73 +26,62 @@ console.log("The user entered: "+userPick3);
 let total = ((parseFloat(userPick) + parseFloat(userPick2) + parseFloat(userPick3)) * 3);
 alert("This transaction will be $"+total+" dollars.");
 
+//exercise 3
+//part 2 (Amazon, Facebook, Google question)
 
+let userPix = prompt('How many hours did you work for Google?');
+console.log('The user entered: ' + userPix);
 
+let userPix2 = prompt('How many hours did you work for Amazon?');
+console.log('The user entered: ' + userPix2);
 
-//the following is question #3 part 2
+let userPix3 = prompt('How many hours did you work for Facebook?');
+console.log('The user entered: ' + userPix3);
 
-// var userInput = prompt('How many hours did you work for Google?');
-// console.log('The user entered: ' + userInput);
-//
-// var userInput = prompt('How many hours did you work for Amazon?');
-// console.log('The user entered: ' + userInput);
-//
-// var userInput = prompt('How many hours did you work for Facebook?');
-// console.log('The user entered: ' + userInput);
-//
-// var paygoogle = 400
-//
-// var pay2g = (paygoogle * userInput)
-//
-// var payamazon = 380
-//
-// var pay2a = (payamazon * userInput)
-//
-// var payfacebook = 350
-//
-// var pay2f = (payfacebook * userInput)
-//
-// var result = pay2g + pay2a + pay2f
-//
-// alert("This transaction will be "+result+" dollars");
+let paygoogle = 400
+let payG = (paygoogle * userPix)
+console.log(payG)
 
+let payamazon = 380
+let payA = (payamazon * userPix2)
+console.log(payA)
 
+let payfacebook = 350
+let payF = (payfacebook * userPix3)
+console.log(payF)
 
+let result = payG + payA + payF
+alert("This transaction will be "+result+" dollars");
 
-/*
-alert("Hello welcome to Codeup! We're going to try to see if we have room for you to attend class ");
-let checkavailability = prompt ('First, lets check availability, How many days out of the week are you available?)
+//exercise 3
+//part 3 (student enrolled question)
 
-let seating = Math.floor(x:Math.random() * 30);
-if (seating < 20 && checkAvailability >= 3)
-{
-    alert("Welcome to Codeup, Happy to have you join us!");
-    console.log("Welcome to Codeup");
+let classNotfull = true;               // change these boolean values to get different results
+let classNoconflict = true;            // change these boolean values to get different results
+
+function scheduleEnroll(cFull, cConflict){
+    if(cFull && cConflict){
+        return 'Enrolled for class!';
+    } else {
+        return 'Cannot enroll for class';
+    }
 }
-else if (seating > 20)
-{
-    alert("We're so sorry bu the class if full at the moment");
-    console.log("Not accepted in , due to class size");
-}
-else if (checkAvailability < 3)
-{
-    alert("Sorry but we need at least 3 days to be successful in this class");
-    console.log('Not accepted in, due to your Availability');
-}
-    alert("Okay here's our last of questions i promise");
 
-//this is the end of bullet point 3
-*/
-//question 4
+scheduleEnroll(classNotfull, classNoconflict);
 
-// let premium = prompt("How many items are you buying?");
-//
-// let numberofitems = parseFloat(prompt("How many items in cart?"));
-//
-// let offervalid = confirm("If your offer valid?");
-//
-// alert("Customer can have discount: " +(offervalid && (premium || numberofitems > 2)));
-//
+
+
+//exercise 4
+
+
+let premium = prompt("How many items are you buying?");
+
+let numberofitems = parseFloat(prompt("How many items in cart?"));
+
+let offervalid = confirm("If your offer valid?");
+
+alert("Customer can have discount: " +(offervalid && (premium || numberofitems > 2)));
+
 
 
 
