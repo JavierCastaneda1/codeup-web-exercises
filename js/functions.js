@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * TODO:
+ * TODO 1:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
  *
@@ -14,7 +14,7 @@ function sayHello(name){
 }
 
 /**
- * TODO:
+ * TODO 2:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
  *
@@ -22,11 +22,11 @@ function sayHello(name){
  */
 
 
-let helloMessage = sayHello('Jimmy');
+let helloMessage = sayHello('Javier');
 console.log(helloMessage);
 
 /**
- * TODO:
+ * TODO 3:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
