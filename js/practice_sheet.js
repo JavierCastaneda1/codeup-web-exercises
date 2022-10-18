@@ -31,16 +31,22 @@
 //
 // adder(5,10);
 
-//*the following is a walk through of the 1st assessment*
+//*Practice Assessment*
+//
+//TODO 1: Define a function named isBoolean that takes in a value and returns a boolean if the argument provided is a boolean value or not.
 //
 // function isBoolean(input) {
 //     return typeof input == "boolean";
 // }
 //
+//TODO 2: Define a function named isString that takes in a value as an input and returns a boolean if the input provided is a string or not. Numeric strings will count as strings and should return true.
+//
 // function isString(str) {
 //     return typeof str === "string";
 // }
 //
+
+
 // function isNotString(str) {
 //     return !isString(str);
 // }
@@ -78,6 +84,22 @@
 // }
 
 //*end of answers for the first assessment*
+
+//*use of .toUpperCase*
+// upperCase(input){
+//     If (typeof input === “string”){
+//         Return input.toUpperCase
+//     }else {
+//         Return false
+//     }
+
+
+
+// **Convert a string to a number
+// Use parseInt, or Parsefloat
+// Let myNumber = 42;
+// parseInt(my number);
+// parseInt(myNumber);
 
 
 
