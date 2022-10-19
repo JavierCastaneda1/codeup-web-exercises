@@ -16,10 +16,9 @@
     person.firstName = "Javier";
     person.lastName = "Castaneda";
 
-    console.log("My first name is " + person["firstName"]+ ". My last name is " +person["lastName"]);
+    console.log("My first name is " + person["firstName"] + ". My last name is " + person["lastName"]);
     console.log(person.firstName)
     console.log(person.lastName)
-
 
 
     /**
@@ -36,15 +35,12 @@
 
 // create a say Hello method on the person object
 
-    person.sup = function() {
-        alert("Hello from " +person["firstName"]+" " +person["lastName"]);
+    person.sup = function () {
+        alert("Hello from " + person["firstName"] + " " + person["lastName"]);
     };
 
 // say Hello!
     person.sup();
-
-
-
 
 
     /** TODO 3:
@@ -61,11 +57,33 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function (shopper){
+        let discount;
+        let discountAmount = (shopper.amount * .12)
+        let newTotal = shopper.amount - discountAmount
+
+        function discountApplies() {
+            if (shopper.amount > 200) {
+                discount = ' do apply for the 12% discount. Your discount is $' + discountAmount + '. Your new total is $' + newTotal + '.';
+            } else {
+                discount = ' do not apply for discount. Your total is still $' + shopper.amount + '.';
+            }
+            return discount;
+        }
+
+        console.log(shopper.name + ' your total is $' + shopper.amount + '. You' +discountApplies(shoppers))
+    })
+
+
+
+
+
 
     /** TODO 4:
      * Create an array of objects that represent books and store it in a
@@ -79,6 +97,35 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = [
+        {title: 'Professional Idiot', author: {firstName: 'Steven', lastName: 'Glover'}},
+        {title: 'Harry Potter', author: {firstName: 'J.K', lastName: 'Rowling'}},
+        {title: 'Death Note', author: {firstName: 'Some', lastName: 'Anime'}},
+        {title: 'The Notebook', author: {firstName: 'Nicholas', lastName: 'Sparks'}},
+        {title: 'It', author: {firstName: 'Stephen', lastName: 'King'}},
+    ];
+
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
+
+    console.log(books[1].title);
+    console.log(books[1].author.firstName);
+    console.log(books[1].author.lastName);
+
+    console.log(books[2].title);
+    console.log(books[2].author.firstName);
+    console.log(books[2].author.lastName);
+
+    console.log(books[3].title);
+    console.log(books[3].author.firstName);
+    console.log(books[3].author.lastName);
+
+    console.log(books[4].title);
+    console.log(books[4].author.firstName);
+    console.log(books[4].author.lastName);
+
 
     /**
      * TODO 5:
@@ -105,6 +152,13 @@
      *      ...
      */
 
+    books.forEach(function (book,index){
+        console.log('Book # ' + (index + 1));
+        console.log('Title: ' + book.title);
+        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+    })
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -115,5 +169,14 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, firstName, lastName) {
+        return {title: title, author: {firstName: firstName, lastName: lastName}}
+    }
+
+    console.log(createBook('My book of Random', 'J', 'Cast'));
+
+
+
 
 })();
