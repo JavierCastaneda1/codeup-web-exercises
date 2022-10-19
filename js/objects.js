@@ -52,39 +52,60 @@
 
     /** TODO 3:
      * HEB has an offer for the shoppers that buy products amounting to
-     * more than $200. If a shopper spends more than $200, they get a 12%
-     * discount. Write a JS program, using conditionals, that logs to the
-     * browser, how much Ryan, Cameron and George need to pay. We know that
-     * Cameron bought $180, Ryan $250 and George $320. Your program will have to
-     * display a line with the name of the person, the amount before the
-     * discount, the discount, if any, and the amount after the discount.
+     * more than $200.
+     *
+     * If a shopper spends more than $200, they get a 12%
+     * discount.
+     *
+     * Write a JS program, using conditionals, that logs to the
+     * browser, how much Ryan, Cameron and George need to pay.
+     *
+     * We know that
+     * Cameron bought $180, Ryan $250 and George $320.
+     *
+     * Your program will have to:
+     * -display a line with the name of the person,
+     * -the amount before the discount,
+     * -the discount,
+     * -and the amount after the discount.
      *
      * Uncomment the lines below to create an array of objects where each object
-     * represents one shopper. Use a foreach loop to iterate through the array,
+     * represents one shopper.
+     *
+     * Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
+    let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
+//first start by making a for each loop
 
     shoppers.forEach(function (shopper){
-        let discount;
-        let discountAmount = (shopper.amount * .12)
-        let newTotal = shopper.amount - discountAmount
-
-        function discountApplies() {
-            if (shopper.amount > 200) {
-                discount = ' do apply for the 12% discount. Your discount is $' + discountAmount + '. Your new total is $' + newTotal + '.';
-            } else {
-                discount = ' do not apply for discount. Your total is still $' + shopper.amount + '.';
-            }
-            return discount;
+        console.log("Shopper: " +shopper.name);
+        console.log("Amount before discount: " +shopper.amount);
+        if(shopper.amount > 200){
+            console.log("Hey you get a 12% discount!!!");
+            shopper.amount = shopper.amount - (shopper.amount * .12)
+            console.log("Amount after discount " +shopper.amount);
         }
+        //MY EXAMPLE
+        // let discount;
+        // let discountAmount = (shopper.amount * .12)
+        // let newTotal = shopper.amount - discountAmount
 
-        console.log(shopper.name + ' your total is $' + shopper.amount + '. You' +discountApplies(shoppers))
+        // function discountApplies() {
+        //     if (shopper.amount > 200) {
+        //         discount = ' do apply for the 12% discount. Your discount is $' + discountAmount + '. Your new total is $' + newTotal + '.';
+        //     } else {
+        //         discount = ' do not apply for discount. Your total is still $' + shopper.amount + '.';
+        //     }
+        //     return discount;
+        // }
+        //
+        // console.log(shopper.name + ' your total is $' + shopper.amount + '. You' +discountApplies(shoppers))
     })
 
 
