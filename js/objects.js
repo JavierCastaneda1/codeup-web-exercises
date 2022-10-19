@@ -12,13 +12,27 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    let person = {};
-    person.firstName = "Javier";
-    person.lastName = "Castaneda";
+    let person2 = {};
+    person2.firstName = "Javier";
+    person2.lastName = "Castaneda";
 
-    console.log("My first name is " + person["firstName"] + ". My last name is " + person["lastName"]);
-    console.log(person.firstName)
-    console.log(person.lastName)
+    console.log("My first name is " + person2["firstName"] + ". My last name is " + person2["lastName"]);
+    console.log(person2.firstName)
+    console.log(person2.lastName)
+
+
+    //cody's solution with "say hello added"
+
+    let person = {
+        firstname: "Cody",
+        lastname: "Hastings",
+        sayHello: function (){
+            return "Hello from "+ person.firstname+ " " +person.lastname;
+            }
+        }
+    console.log(person.firstname);
+    console.log(person.lastname);
+
 
 
     /**
@@ -33,14 +47,7 @@
 
     "use strict";
 
-// create a say Hello method on the person object
-
-    person.sup = function () {
-        alert("Hello from " + person["firstName"] + " " + person["lastName"]);
-    };
-
-// say Hello!
-    person.sup();
+    console.log(person.sayHello());
 
 
     /** TODO 3:
