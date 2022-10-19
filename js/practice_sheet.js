@@ -220,6 +220,20 @@ function isPalindrome(str) {
 
 
 
+//IF ELSE CONDITIONALS EXAMPLE TO PLAY AROUND WITH!
+
+let x = 55;
+let y = 60;
+
+if(x == 10 || y < 20) {
+    console.log("This if stuff");
+} else if (x > 50 && y > 50) {
+    console.log("This else if stuff ")
+} else {
+    console.log("That else stuff");
+}
+
+
 
 
 

@@ -170,12 +170,6 @@
      *   `showBookInfo` function.
      */
 
-    function createBook(title, firstName, lastName) {
-        return {title: title, author: {firstName: firstName, lastName: lastName}}
-    }
-
-    console.log(createBook('My book of Random', 'J', 'Cast'));
-
 
 
 
