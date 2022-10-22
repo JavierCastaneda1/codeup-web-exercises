@@ -1,6 +1,12 @@
 
-.fancy-header {
-    color: purple;
-    text-decoration: underline;
+/*.fancy-header {*/
+/*    color: purple;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+.change-font{
+    font-family: 'Mouse Memoirs', sans-serif;
 }
+
+
 

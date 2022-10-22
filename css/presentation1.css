@@ -1,0 +1,15 @@
+/*// TODO What is a font stack and how should the best one be chosen?*/
+
+/*// A font stack is a list of fonts that are used in a specific order. The first font in the list is the primary font, and the rest are fallback fonts. The best font stack is the one that is most likely to be available on the user's computer.*/
+
+/*// TODO What is the difference between serif and sans serif font?*/
+
+/*// Serif fonts have small lines at the end of the letters, sans serif fonts do not*/
+
+/*// TODO How can a developer use a Google font?*/
+
+/*// A developer can use a Google font by adding a link to the font in the head of the HTML document*/
+
+/*// TODO How can a developer figure out what font is being used on a given web page?*/
+
+/*// A developer can figure out what font is being used on a given web page by using the inspect element tool in the browser*/
