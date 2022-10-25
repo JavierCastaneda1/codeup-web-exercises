@@ -1,0 +1,9 @@
+.box {
+    display: inline-block;
+    background: darkgreen;
+    color: azure;
+    font-size: 28px;
+    padding: 10px 15px 65px 75px;
+    border: orange 10px solid;
+    border-radius: 50%;
+}
