@@ -26,32 +26,6 @@ console.log("The user entered: "+userPick3);
 let total = ((parseFloat(userPick) + parseFloat(userPick2) + parseFloat(userPick3)) * 3);
 alert("This transaction will be $"+total+" dollars.");
 
-//exercise 3
-//part 2 (Amazon, Facebook, Google question)
-
-let userPix = prompt('How many hours did you work for Google?');
-console.log('The user entered: ' + userPix);
-
-let userPix2 = prompt('How many hours did you work for Amazon?');
-console.log('The user entered: ' + userPix2);
-
-let userPix3 = prompt('How many hours did you work for Facebook?');
-console.log('The user entered: ' + userPix3);
-
-let paygoogle = 400
-let payG = (paygoogle * userPix)
-console.log(payG)
-
-let payamazon = 380
-let payA = (payamazon * userPix2)
-console.log(payA)
-
-let payfacebook = 350
-let payF = (payfacebook * userPix3)
-console.log(payF)
-
-let result = payG + payA + payF
-alert("This transaction will be "+result+" dollars");
 
 //exercise 3
 //part 3 (student enrolled question)
