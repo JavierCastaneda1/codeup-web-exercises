@@ -1,0 +1,64 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #E2E9EE;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.top-nav {
+    position:fixed;
+    width:100%;
+    z-index: 1000;
+}
+
+.nav-item a{
+    color:gray;
+    text-decoration: none;
+    padding: 1.5em;
+}
+
+.nav-item {
+    display: inline;
+    width: 100%;
+    padding:1em;
+}
+
+.btn {
+    float:right;
+    background-color: white;
+    border: 1px gray solid;
+    border-radius: 10%;
+    position: relative;
+}
+
+.profile-image {
+    border-radius: 50%;
+    float: left;
+    position: absolute;
+    height: 80px;
+}
+
+.profile-details{
+    width:25%;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.timeline{
+    width: 50%;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.who-to-follow{
+    width: 25%;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+.profile-form {
+    float:right;
+    position: center;
+    height: 100%;
+}
