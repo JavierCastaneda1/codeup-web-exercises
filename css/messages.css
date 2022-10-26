@@ -11,10 +11,9 @@ body, html {
     margin: 5px;
     width: 80%;
     height: 20px;
-    display: inline-block;
     border-radius: 5px;
     border:1px solid #CCCCCC;
-    padding: 1em;
+    padding: 5px;
 }
 
 .message-success {
@@ -23,10 +22,9 @@ body, html {
     margin: 5px;
     width: 80%;
     height: 20px;
-    display: inline-block;
     border-radius: 5px;
     border:1px solid #CCCCCC;
-    padding: 1em;
+    padding: 5px;
 }
 
 .message-warning {
@@ -35,10 +33,9 @@ body, html {
     margin: 5px;
     width: 80%;
     height: 20px;
-    display: inline-block;
     border-radius: 5px;
     border:1px solid #CCCCCC;
-    padding: 1em;
+    padding: 5px;
 }
 .message-error {
     color: #69001C;
@@ -46,10 +43,9 @@ body, html {
     margin: 5px;
     width: 80%;
     height: 20px;
-    display: inline-block;
     border-radius: 5px;
     border:1px solid #CCCCCC;
-    padding: 1em;
+    padding: 5px;
 }
 
 
