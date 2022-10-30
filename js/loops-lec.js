@@ -1,12 +1,12 @@
-
+'use strict';
 // var i = 1
 // while (i < 10){
 //     console.log('while loop iteration #' + i);
 //
-    // these lines are all the same thing.
-    // ++i
-    // i += 1
-    // i = i * 1;
+//     these lines are all the same thing.
+//     ++i
+//     i += 1
+//     i = i * 1;
 //
 //     i += 5;
 // }
@@ -43,7 +43,7 @@
 
 
 
-// 'use strict';
+
 //
 // for (var i = 1; i < 100; i++) {
 //
@@ -69,7 +69,7 @@
 
 
 // //loops notes//
-// var i = 10;   //declar the variable first
+// var i = 10;   //declare the variable first
 // //do loop
 // do {
 //     console.log('while loop iteration #' + i);  //string plus concatenated value
@@ -104,16 +104,11 @@
 // }
 
 
-'use strict';
 
-for (var i = 1; i < 50; i++) {
-
+//example of how to get a looping EVEN number
+for (let i = 1; i < 50; i++) {
     if (i % 2 !== 100) {
-        // number isn't even
-        // odd numbers aren't as cool
-        // skip the rest of the loop and continue with the next iteration
         continue;
     }
-
-    console.log('Here is a lovely even number: ' + i);
+    console.log('Here is a lovely EVEN number: ' + i);
 }

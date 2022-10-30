@@ -68,25 +68,25 @@
 // while(i < 10) {
 //     console.log(i);
 //     i++;
-//     if(i > 5) break;             //swap out 'break' or 'continue';
+//     if(i > 5) break;             //swap out 'break' or 'continue' to get different functionality.
 // }
 
 //example of a do while loop
 
-let i = 0;
-do {
-    i++;
-    if (i === 5) continue;
-    console.log(i);
-} while (i < 10);
-
-//example of a for each loop
-
-const animals = ['Porcupine', 'Snail', 'Ostrich', 'Baboon','Chameleon'];
-
-animals.forEach( animal => {
-    console.log(animal);
-});
+// let i = 0;
+// do {
+//     i++;
+//     if (i === 5) continue;
+//     console.log(i);
+// } while (i < 10);
+//
+// //example of a for each loop
+//
+// const animals = ['Porcupine', 'Snail', 'Ostrich', 'Baboon','Chameleon'];
+//
+// animals.forEach( animal => {
+//     console.log(animal);
+// });
 //this one is weird. fat arrow function that creates variable with weird syntax. Be careful with the ending.
 
 
@@ -99,26 +99,64 @@ animals.forEach( animal => {
 //if it is between 12pm and 6pm: Good afternoon!
 //otherwise: Good evening!
 
-let hour = 19;    //change this number to make the if else do different stuff.
-
-if(hour > 6 && hour < 12){
-    console.log('Good morning');
-}
-else if (hour > 12 && hour < 18) {
-    console.log('Good afternoon!');
-}
-else
-    console.log('Good evening!');
+// let hour = 19;    //change this number to make the if else do different stuff.
+//
+// if(hour > 6 && hour < 12){
+//     console.log('Good morning');
+// }
+// else if (hour > 12 && hour < 18) {
+//     console.log('Good afternoon!');
+// }
+// else
+//     console.log('Good evening!');
 
 //this working example returns greeting depending on what time you input on the top.
 
 
+//Skate Trick loop!
+
+// let kickflips = 3;            //number of kickflips spun.
+// let shuv = 2;
+//
+// if(kickflips === 3 && shuv === 0){
+//     console.log('TRIPLE FLIP WTF');
+// }
+// else if(kickflips === 2 && shuv === 0){
+//     console.log('double flip, nice!');
+// }
+// else if(kickflips === 1 && shuv === 1){
+//     console.log('nice Varial flip yo!');
+// }
+// else if(kickflips === 1 && shuv === 0){
+//     console.log('Nice kickflip dude!');
+// }
+// else if(kickflips === 1 && shuv === 2){
+//     console.log('TRE BOMB');
+// }
+// else if(kickflips >= 3 && shuv >= 2){
+//     console.log('Circus trix');
+// }
+// else
+//     console.log('illegal af! go home!');
 
 
 
+//even number example
+for (let i = 1; i <= 25; i++) {
+    if (i % 2 !== 100) {
+        console.log('Here is a lovely EVEN number: '+ i++);
+    }
+}
 
 
-
+//odd number example
+function isOdd(num) {
+    return num % 2;
+}
+console.log('1 is ' + isOdd(1));
+console.log('2 is ' + isOdd(2));
+console.log('3 is ' + isOdd(3));
+console.log('4 is ' + isOdd(4));
 
 
 
