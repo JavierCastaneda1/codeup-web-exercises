@@ -113,6 +113,9 @@
 //this working example returns greeting depending on what time you input on the top.
 
 
+
+
+
 //Skate Trick loop!
 
 // let kickflips = 3;            //number of kickflips spun.
@@ -142,21 +145,21 @@
 
 
 //even number example
-for (let i = 1; i <= 25; i++) {
-    if (i % 2 !== 100) {
-        console.log('Here is a lovely EVEN number: '+ i++);
-    }
-}
+// for (let i = 1; i <= 25; i++) {
+//     if (i % 2 !== 100) {
+//         console.log('Here is a lovely EVEN number: '+ i++);
+//     }
+// }
 
 
 //odd number example
-function isOdd(num) {
-    return num % 2;
-}
-console.log('1 is ' + isOdd(1));
-console.log('2 is ' + isOdd(2));
-console.log('3 is ' + isOdd(3));
-console.log('4 is ' + isOdd(4));
+// function isOdd(num) {
+//     return num % 2;
+// }
+// console.log('1 is ' + isOdd(1));
+// console.log('2 is ' + isOdd(2));
+// console.log('3 is ' + isOdd(3));
+// console.log('4 is ' + isOdd(4));
 
 
 

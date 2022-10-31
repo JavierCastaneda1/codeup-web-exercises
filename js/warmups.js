@@ -61,49 +61,94 @@
 // TODO: Write a function that takes in an array of objects and returns the object with the largest height property.
 
 
-const hamsters = [
-    {
-        name: "Hamtaro",
-        heightInMM: 86,
-        fur: ['orange', 'white'],
-        gender: "male",
-        dateOfBirth: "August 6"
-    } , {
-        name: "Bijou",
-        heightInMM: 75,
-        fur: ['white'],
-        gender: "female",
-        dateOfBirth: "July 10"
-    } , {
-        name: "Oxnard",
-        heightInMM: 100,
-        fur: ['grey', 'white'],
-        gender: "male",
-        dateOfBirth: "May 3"
-    } , {
-        name: "Boss",
-        heightInMM: 120,
-        fur: ['brown', 'white'],
-        gender: "male",
-        dateOfBirth: "September 21"
-    } , {
-        name: "Snoozer",
-        heightInMM: 85,
-        fur: ['brown', 'white', "pink"],
-        gender: "male",
-        dateOfBirth: "January 14"
-    }
-];
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+//
+// getTallestHamster(hamsters); // should return {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"};
+//
+// function getTallestHamster(arr){
+//     let tallest = {heightInMM: 0} ;     //start with establishing a height
+//     arr.forEach(function(el){
+//         if (el.heightInMM > tallest.heightInMM){
+//             tallest = el;
+//         }
+//     });
+//     return tallest;
+// }
+// console.log(getTallestHamster(hamsters));
 
-getTallestHamster(hamsters); // should return {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"};
 
-function getTallestHamster(arr){
-    let tallest = {heightInMM: 0} ;     //start with establishing a height
-    arr.forEach(function(el){
-        if (el.heightInMM > tallest.heightInMM){
-            tallest = el;
+
+
+// Warmup: Write FizzBuzz from 1-100;
+// Numbers evenly divisible by 3 should be replaced by Fizz
+// Numbers evenly divisible by 5 should be replaced by Buzz
+// Numbers evenly divisible by both 3 and 5 should be replaced by FizzBuzz
+// All other numbers should be printed in the console.
+
+// let f = "Fizz";
+// let b = "Buzz";
+// for (let num = 1; num <=100 ; num++) {
+//     if (num% 3 === 0 && num % 5 ===0){
+//         console.log(f + b);
+//     }
+//     else if (num % 5 === 0){
+//         console.log(b);
+//     }
+//     else if (num % 3 === 0){
+//         console.log(f);
+//     }
+//     else {
+//         console.log(num);
+//     }
+// }
+
+
+//FizzBuzz Cody example
+function fizzBuzz(){
+    for(let i = 1; i <= 100; i++){
+        if( i % 3 === 0 && i % 5 === 0){
+            console.log('FizzBuzz');
+        } else if(i % 5 === 0){
+            console.log('Buzz');
+        } else if(i % 3 === 0) {
+            console.log('Fizz');
         }
-    });
-    return tallest;
+        else {
+            console.log(i);
+        }
+    }
 }
-console.log(getTallestHamster(hamsters));
+
+fizzBuzz();
