@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+.navBar{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: gray;
+}
+
+a {
+    display: inline-block;
+    font-family: "sans-serif";
+    color: black;
+    padding: 10px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: Helvetica;
+    margin: auto;
+    padding: .2em;
+    font-size: 3em;
+}
+
+a:hover{
+    color:blue;
+}
