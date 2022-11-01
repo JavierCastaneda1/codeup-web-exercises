@@ -11,7 +11,7 @@
 
 a {
     display: inline-block;
-    font-family: "sans-serif";
+    font-family: sans-serif;
     color: black;
     padding: 10px;
     font-weight: bolder;
@@ -19,12 +19,12 @@ a {
 }
 
 .logo {
-    font-family: Helvetica;
+    font-family: sans-serif;
     margin: auto;
     padding: .2em;
     font-size: 3em;
 }
 
 a:hover{
-    color:blue;
+    color:yellowgreen;
 }
