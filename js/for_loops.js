@@ -6,20 +6,33 @@
 
 function showMultiplicationTable(x) {
     for (let i = 1; i <= 10; i++) {
-        console.log(`${x} x ${i} = ${x * i}, is your answer`);
+        console.log(`${x} x ${i} = ${x * i}`);
     }
 }
-console.log(`Im done`)
-
 showMultiplicationTable(7);
+
+
+
+// take input from the user
+// const number = parseInt(prompt('Enter an integer: '));
+//
+// //creating a multiplication table
+// for(let i = 1; i <= 10; i++) {
+//
+//     // multiply i with number
+//     const result = i * number;
+//
+//     // display the result
+//     console.log(`${number} * ${i} = ${result}`);
+// }
 
 
 //*exercise 2* copied example on walk-through
 
 function getRandomArbitrary(min, max) {
-    return Math.floor(Math.random() *(max -min) + min);
+    return Math.floor(Math.random() *(max -min) + min);    //this will generate a random number
 }
-console.log(getRandomArbitrary(20,200));
+console.log(getRandomArbitrary(20,200));     //sets parameter for which numbers to check for (20-200)
 
 for(let i = 1; i <= 10; i++) {
     let randNum = getRandomArbitrary(20, 200);

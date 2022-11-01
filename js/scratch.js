@@ -7,6 +7,11 @@
 //     return radiusCalc;
 // }
 
+//solution 2 for area of a circle
+// function areaOfCircle(x) {
+//     return Math.pow(x, 2) * Math.PI;
+// }
+
 //LOOPS
 
 //basic loop
