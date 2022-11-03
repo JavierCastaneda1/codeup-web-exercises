@@ -166,39 +166,105 @@
 // console.log('3 is ' + isOdd(3));
 // console.log('4 is ' + isOdd(4));
 
+
+
 //the following are practice functions for the 2nd assessment.
+//TODO:Write a function that takes in a grocery item object and returns a string representing the price per item for that object.
+// example:
+// let potatoes = {
+// 	name: potatoes,
+// 	quantity: 20,
+// 	totalPrice: 47
+// };
+// getPricePerItem(potatoes) // returns "$2.35"
 
 
-// #LAO Review
-// ##Questions
-// 1. Write a function that takes in a grocery item object and returns a string representing the price per item for that object.
-
-
-let groceries = {
-name: "Donuts",
-quantity: "20",
-totalPrice: "47"
-};
-
-
-function grabObject(){
-}
-
-grabObject();
-
-
+// let potatoes = {
+// name: "potato",
+// quantity: "20",
+// totalPrice: "47"
+// };
+//
+// function getGrocery(item){
+//     return "$"+(item.totalPrice/item.quantity);       //to add a dollar sign to the return.
+// }
+// console.log(getGrocery(potatoes));
 
 
 // 2. Write a function that takes in two string arguments: the first being the string assessed, and the second being a single letter. The function should return a count of the occurrences of the letter (second argument) within the string (first argument). This function should count both upper and lowercase instances of the letter.
+
+
+    function countOccurancesOfLetter(stringOne, letter){
+        let myString = stringOne.toLowerCase();
+        let mySubString = letter.toLowerCase();
+        let count = myString.split(mySubString).length -1;
+        console.log(count);
+        return count;
+}
+
+// countOccurrencesOfLetter("horseradish", "s") // returns 2
+// countOccurrencesOfLetter("Microsoft Excel: Professional Edition". "E") // returns 4
+// countOccurrencesOfLetter("Sanrio", "x") // returns 0
+
 
 
 
 
 // 3. Write a function that takes in an array of  grocery item objects and returns the object with the highest `weightInGrams` property.
 
+// const cart = [
+//     {
+//         name: "Kingsford Charcoal",
+//         weightInGrams: 4535
+//     }, {
+//         name: "Krazy Glue",
+//         weightInGrams: 5
+//     }, {
+//         name: "NVIDIA RTX 4090",
+//         weightInGrams: 2186
+//     }
+// ];
+//
+// function highestWeight(cart){
+//     let highest = 0
+//     cart.forEach(function(object){
+//         if (object.weightInGrams >= highest){
+//             highest = object.weightInGrams;
+//         }
+//
+//     });
+//     console.log(highest);
+// }
+// highestWeight(cart);
+
+
+
+
 
 
 // 4. Write a function that takes in an array of numbers and returns an array of numbers from the original array that are evenly divisible by 13. If a number is not evenly divisible by 13, it should not be returned. If no elements within the array are evenly divisible by 13, the function should return an empty array.
+
+// const arr1 = [24, 25, 26, 27, 29];
+// const arr2 = [13, 26, 39, 52, 65];
+// const arr3 = [0, 1, 2, 3, 4, 5];
+//
+//
+// function by13(arr){
+//     let total = [];
+//     arr.forEach(function(index){
+//         if(index % 13 === 0){
+//             total.push(index);
+//         }
+//     })
+//     console.log(total);
+// }
+// by13(arr1);
+// by13(arr2);
+// by13(arr3);
+
+
+
+
 
 
 
@@ -207,3 +273,62 @@ grabObject();
 // 2. `numberOfWords` which is to be set to the number of words within the string.
 // 3. `instancesOfE` which to be set to the number of instances of the letter "E" within the argument passed into the function. The count should reflect instances of both uppercase and lowercase "E" (HINT: a previous function maybe useful in achieving this).
 
+function returnObject(string){
+    let object = {};
+    object.string = string;
+    object.words = (countOccurancesOfLetter(string, ` `))+1;
+    object.eCount = countOccurancesOfLetter(string, `E`);
+    console.log(object);
+}
+returnObject("Street Fighter EX3");
+
+
+
+
+
+
+
+
+//This is a practice exercise for Looping over objects.
+
+// let user = {
+//     name: 'Javier',
+//     age: 35,
+//     occupation: 'Student',
+//     gender: 'Male'
+// };
+
+//looping over object property names
+//keys method will return an array
+//this array will contain all the properties of passed object as its element.
+
+// let properties = Object.keys(user);
+// console.log(properties);
+// console.log(properties.length);
+//
+// for(let prop of properties){
+//     console.log(prop);
+// }
+
+//looping over property values to return array (contains all the property values and its element)
+// let value = Object.values(user);
+// console.log(value);
+//
+// for(let val of value){
+//     console.log(val);
+// }
+
+
+//how to loop over both property name and property value
+
+//
+// let entries = Object.entries(user);
+// console.log(entries);
+//
+// for(let entry of entries){
+//     console.log(`${entry[0]}: ${entry[1]}`);
+// }
+//
+// for(let [key, val] of entries){
+//     console.log(`${key} is ${val}`);
+// }

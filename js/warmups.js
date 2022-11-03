@@ -136,19 +136,69 @@
 
 
 //FizzBuzz Cody example
-function fizzBuzz(){
-    for(let i = 1; i <= 100; i++){
-        if( i % 3 === 0 && i % 5 === 0){
-            console.log('FizzBuzz');
-        } else if(i % 5 === 0){
-            console.log('Buzz');
-        } else if(i % 3 === 0) {
-            console.log('Fizz');
-        }
-        else {
-            console.log(i);
-        }
-    }
-}
+// function fizzBuzz(){
+//     for(let i = 1; i <= 100; i++){
+//         if( i % 3 === 0 && i % 5 === 0){
+//             console.log('FizzBuzz');
+//         } else if(i % 5 === 0){
+//             console.log('Buzz');
+//         } else if(i % 3 === 0) {
+//             console.log('Fizz');
+//         }
+//         else {
+//             console.log(i);
+//         }
+//     }
+// }
+//
+// fizzBuzz();
 
-fizzBuzz();
+
+//TODO: warm up 11/03/22 Today's warmup: Write a function that takes in an array of objects and returns the average of the heightInMM properties from each object.
+
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+//
+//
+//
+// function getAverageHeight(array){
+//     let totalHeight = 0;        //start by declaring what you are looking for (height)
+//     for (let element of array){
+//         totalHeight += element.heightInMM;
+//     }
+//     return totalHeight / array.length;
+// }
+//
+//
+// console.log(getAverageHeight(hamsters)); // should return 93.2;
