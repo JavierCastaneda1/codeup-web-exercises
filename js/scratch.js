@@ -121,9 +121,10 @@
 
 
 
-//Skate Trick loop!
 
-// let kickflips = 3;            //number of kickflips spun.
+// Skate Trick loop!
+//
+// let kickflips = 1;            //number of kickflips spun.
 // let shuv = 2;
 //
 // if(kickflips === 3 && shuv === 0){
@@ -192,17 +193,32 @@
 
 
 // 2. Write a function that takes in two string arguments: the first being the string assessed, and the second being a single letter. The function should return a count of the occurrences of the letter (second argument) within the string (first argument). This function should count both upper and lowercase instances of the letter.
+//NICHOLAS EXAMPLE
 
-
-    function countOccurancesOfLetter(stringOne, letter){
-        let myString = stringOne.toLowerCase();         //type checking for lowercase
-        let mySubString = letter.toLowerCase();         //type checking for lowercase
-        let count = myString.split(mySubString).length -1;
-        console.log(count);
-        return count;
+function countOccurancesOfLetter(stringOne, letter){
+    let stringArr = stringOne.toLowerCase().split(``);
+    console.log(stringArr);
+    let count = 0;
+    stringArr.forEach(function(index){
+        if (index === letter){
+            count += 1;
+        }
+    })
+    console.log(count);
+    return count;
 }
+countOccurancesOfLetter(`Gengar`, `g`);
 
-console.log(countOccurancesOfLetter("POKEMON", "a"));
+
+
+
+
+
+
+        // console.log(myString.split(mySubString));
+        // return count;
+
+// console.log(countOccurancesOfLetter("Gengar", "g"));
 
 // countOccurrencesOfLetter("horseradish", "s") // returns 2
 // countOccurrencesOfLetter("Microsoft Excel: Professional Edition". "E") // returns 4
@@ -254,19 +270,16 @@ console.log(countOccurancesOfLetter("POKEMON", "a"));
 // function by13(arr){
 //     let total = [];
 //     arr.forEach(function(index){
-//         if(index % 13 === 0){
+//         if(index !== 0 && index % 13 === 0){
 //             total.push(index);
 //         }
 //     })
 //     console.log(total);
 // }
+//
 // by13(arr1);
 // by13(arr2);
 // by13(arr3);
-
-
-
-
 
 
 
