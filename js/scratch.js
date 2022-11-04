@@ -195,12 +195,14 @@
 
 
     function countOccurancesOfLetter(stringOne, letter){
-        let myString = stringOne.toLowerCase();
-        let mySubString = letter.toLowerCase();
+        let myString = stringOne.toLowerCase();         //type checking for lowercase
+        let mySubString = letter.toLowerCase();         //type checking for lowercase
         let count = myString.split(mySubString).length -1;
         console.log(count);
         return count;
 }
+
+console.log(countOccurancesOfLetter("POKEMON", "a"));
 
 // countOccurrencesOfLetter("horseradish", "s") // returns 2
 // countOccurrencesOfLetter("Microsoft Excel: Professional Edition". "E") // returns 4
@@ -273,14 +275,14 @@
 // 2. `numberOfWords` which is to be set to the number of words within the string.
 // 3. `instancesOfE` which to be set to the number of instances of the letter "E" within the argument passed into the function. The count should reflect instances of both uppercase and lowercase "E" (HINT: a previous function maybe useful in achieving this).
 
-function returnObject(string){
-    let object = {};
-    object.string = string;
-    object.words = (countOccurancesOfLetter(string, ` `))+1;
-    object.eCount = countOccurancesOfLetter(string, `E`);
-    console.log(object);
-}
-returnObject("Street Fighter EX3");
+// function returnObject(string){
+//     let object = {};
+//     object.string = string;
+//     object.words = (countOccurancesOfLetter(string, ` `))+1;
+//     object.eCount = countOccurancesOfLetter(string, `E`);
+//     console.log(object);
+// }
+// returnObject("Street Fighter EX3");
 
 
 
