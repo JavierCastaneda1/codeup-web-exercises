@@ -16,16 +16,16 @@
 
 //basic loop
 
-// for(let i = 1; i <= 5; i++){     //basic structure.
-//     console.log('Loop ' + i);    //add i to make it count on terminal.
-// }
+for(let i = 1; i <= 5; i++){     //basic structure.
+    console.log('Loop ' + i);    //add i to make it count on terminal.
+}
 
 //this loops prints out PRECISELY loop 1-5 on the console.
 //im going to write this same loop in decrement mode.
 
-// for(let i = 5; i > 0; i--){
-//     console.log('Loop ' + i);
-// }
+for(let i = 5; i > 0; i--){
+    console.log('Reverse Loop ' + i);
+}
 
 //example of 'break' with the same loop.
 //this loop will only loop downward till it reaches 3. (it breaks)
@@ -37,20 +37,28 @@
 
 //loops with arrays  (for loop version)
 
-// const names = ['Shin','Javier','Herby','Gonzalo'];
-//
-// for (let i = 0; i < names.length; i++){     //use names.length
-//     console.log(names[i]);              //plug in index counter here
-// }
+const names = ['Shin','Javier','Herby','Gonzalo'];
+
+for (let i = 0; i < names.length; i++){     //use names.length
+    console.log(names[i]);              //plug in index counter here
+}
+
+//make another one
+
+const namesTwo = ['Mew', 'Mewtwo', 'Ryu', 'Charizard'];
+
+for (let i=0; i < namesTwo.length; i++){
+    console.log(namesTwo[i]);
+}
 
 
 //"for of" loop examples
 
-// const names2 = ['Pikachu','Mew','Snorlax','Gengar'];
+const names2 = ['Pikachu','Mew','Snorlax','Gengar'];
 
-// for (name of names2) {      //name(creates variable) of names(array) iterates the whole array
-//     console.log(name);
-// }
+for (name of names2) {      //name(creates variable) of names(array) iterates the whole array
+    console.log(name);
+}
 //or (the short version) below
 
 // for (name of names2) console.log(name);
@@ -151,21 +159,14 @@
 
 
 //even number example
-// for (let i = 1; i <= 25; i++) {
-//     if (i % 2 !== 100) {
-//         console.log('Here is a lovely EVEN number: '+ i++);
-//     }
-// }
+//This counts even numbers up to 25.
+for (let x = 1; x <= 25; x++) {
+    if (x % 2 === 0) {
+        console.log('Here is a lovely EVEN number: '+ x++);
+    }
+}
 
 
-//odd number example
-// function isOdd(num) {
-//     return num % 2;
-// }
-// console.log('1 is ' + isOdd(1));
-// console.log('2 is ' + isOdd(2));
-// console.log('3 is ' + isOdd(3));
-// console.log('4 is ' + isOdd(4));
 
 
 
@@ -180,49 +181,42 @@
 // getPricePerItem(potatoes) // returns "$2.35"
 
 
-// let potatoes = {
-// name: "potato",
-// quantity: "20",
-// totalPrice: "47"
-// };
-//
-// function getGrocery(item){
-//     return "$"+(item.totalPrice/item.quantity);       //to add a dollar sign to the return.
-// }
-// console.log(getGrocery(potatoes));
+let potatoes = {        //Set the object up
+name: "potato",
+quantity: "20",
+totalPrice: "47"
+};
+
+let cabbages = {        //and another object just for fun
+    name: "cabbage",
+    quantity: "40",
+    totalPrice: "94"
+};
+
+//open the function
+function getGrocery(item){    //item goes in here
+    return "$"+(item.totalPrice/item.quantity);       //return here and add dollar sign
+}
+console.log(getGrocery(potatoes));
+console.log(getGrocery(cabbages));
 
 
 // 2. Write a function that takes in two string arguments: the first being the string assessed, and the second being a single letter. The function should return a count of the occurrences of the letter (second argument) within the string (first argument). This function should count both upper and lowercase instances of the letter.
-//NICHOLAS EXAMPLE
 
-function countOccurancesOfLetter(stringOne, letter){
-    let stringArr = stringOne.toLowerCase().split(``);
-    console.log(stringArr);
-    let count = 0;
-    stringArr.forEach(function(index){
-        if (index === letter){
-            count += 1;
+function countOccurancesOfLetter(stringOne, letter){       //set up function to take two variables named whatever.
+    let stringArr = stringOne.toLowerCase().split(``);    //this part checks for lowercase and splits the word into letters.
+    console.log(stringArr);                                      //this will print the word fully separated.
+    let count = 0;                                   //we will not establish a count for 'letter' being checked for.
+    stringArr.forEach(function(index){    //for each letter of the array we will be checking index
+        if (index === letter){                  //if letter input is equal to letter in the array it...
+            count += 1;                         //will count up (for every letter detected)
         }
-    })
+    })                                          //take note of this syntax
     console.log(count);
-    return count;
 }
 countOccurancesOfLetter(`Gengar`, `g`);
-
-
-
-
-
-
-
-        // console.log(myString.split(mySubString));
-        // return count;
-
-// console.log(countOccurancesOfLetter("Gengar", "g"));
-
-// countOccurrencesOfLetter("horseradish", "s") // returns 2
-// countOccurrencesOfLetter("Microsoft Excel: Professional Edition". "E") // returns 4
-// countOccurrencesOfLetter("Sanrio", "x") // returns 0
+countOccurancesOfLetter('Broski','b');
+countOccurancesOfLetter('parangarikutirimikuaro', 'a');
 
 
 
@@ -230,32 +224,47 @@ countOccurancesOfLetter(`Gengar`, `g`);
 
 // 3. Write a function that takes in an array of  grocery item objects and returns the object with the highest `weightInGrams` property.
 
-// const cart = [
-//     {
-//         name: "Kingsford Charcoal",
-//         weightInGrams: 4535
-//     }, {
-//         name: "Krazy Glue",
-//         weightInGrams: 5
-//     }, {
-//         name: "NVIDIA RTX 4090",
-//         weightInGrams: 2186
-//     }
-// ];
-//
-// function highestWeight(cart){
-//     let highest = 0
-//     cart.forEach(function(object){
-//         if (object.weightInGrams >= highest){
-//             highest = object.weightInGrams;
-//         }
-//
-//     });
-//     console.log(highest);
-// }
-// highestWeight(cart);
+const cart = [
+    {
+        name: "Kingsford Charcoal",
+        weightInGrams: 4535
+    }, {
+        name: "Krazy Glue",
+        weightInGrams: 5
+    }, {
+        name: "NVIDIA RTX 4090",
+        weightInGrams: 2186
+    }
+];
+
+// establish cart with objects.
+function highestWeight(cart){
+    let highest = 0              //establish a count for "highest".
+    cart.forEach(function(object){
+        if (object.weightInGrams >= highest){
+            highest = object.weightInGrams;
+        }
+
+    });
+    console.log(highest);
+}
+highestWeight(cart);             //this example will show the WEIGHT number of the hamster.
 
 
+
+//second example: this one returns the WHOLE object!
+function highestWeighttwo(cart){
+    let tallest = {};
+    tallest.weightInGrams = 0;
+    cart.forEach(function(objectOne){
+        if (objectOne.weightInGrams >= tallest.weightInGrams){
+            tallest = objectOne;
+        }
+
+    });
+    console.log(tallest);
+}
+highestWeighttwo(cart);
 
 
 
@@ -268,10 +277,10 @@ countOccurancesOfLetter(`Gengar`, `g`);
 //
 //
 // function by13(arr){
-//     let total = [];
-//     arr.forEach(function(index){
-//         if(index !== 0 && index % 13 === 0){
-//             total.push(index);
+//     let total = [];                  //let the total become an array like this
+//     arr.forEach(function(index){      //for each array run a function of checking the index
+//         if(index !== 0 && index % 13 === 0){          //if the index is not 0 AND divisible by 13.....
+//             total.push(index);                    //grab the total of indexes and make them into new array.
 //         }
 //     })
 //     console.log(total);
@@ -347,3 +356,66 @@ countOccurancesOfLetter(`Gengar`, `g`);
 // for(let [key, val] of entries){
 //     console.log(`${key} is ${val}`);
 // }
+
+
+//TODO: Write a function names isPositive that accepts a number and returns true or false based on wherther the input is negative.
+
+// function isPositive(number){
+//     return number > 0;
+// }
+//
+// console.log(isPositive(2));
+
+
+//TODO:Write a function named isFortTwo that accepts a number and returns a boolean that indicates whether that number is equal to 42.
+
+//CHECK
+// function isFortyTwo(x){
+//     if(x === 42){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+//
+// console.log(isFortyTwo(42));
+
+//TODO: Write a function named countEvens that accepts an array of numbers and returns the number of even numbers in the array.
+//iterate through the array
+//checking if there is a remainder of zero
+//return the count
+//this is an example of a foreach
+//CHECK
+// let arr= [1,2,3,4,5,6,7,8,9,10]
+//
+// function countEvens(arr){
+//     let count = 0;
+//     arr.forEach(function(element){
+//         if(element % 2 === 0){
+//             count ++
+//         }
+//     })
+//     return count;
+// }
+//
+// console.log(countEvens(arr));
+
+
+//TODO: Define a function named isAllLowerCase that takes in a string and returns true if all characters in the string are lowercase. else it should return false.
+//CHECK
+// function isAllLowerCase(string){
+//     if(string === string.toLowerCase()){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+//TODO: Write a function that takes in a string and returns an object with the following properties:
+// // 	1. `string` which is to be set the to the argument passed into the function.
+// // 	2. `numberOfWords` which is to be set to the number of words within the string.
+// // 	3. `instancesOfE` which to be set to the number of instances of the letter "E" within the argument passed into the function. The count should reflect instances of both uppercase and lowercase "E" (HINT: a previous function maybe useful in achieving this).
+
+
+
+
