@@ -5,57 +5,36 @@
   </head>
   <body>
     <h1>Konami Code</h1>
-
+    <script
+      src="js/jquery.js">
+    </script>
 
     <script>
     "use strict";
+    let konamiCode = [];
+    let codeArray = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
 
-    //a key map of the inputs required for the cheat.
-    let inputKeys = {
-      37: 'left',
-      38: 'up',
-      39: 'right',
-      40: 'down',
-      65: 'a',
-      66: 'b'
-    };
+    $(document).keyup(function(e){
 
-    //official Konami code
-    let konamiCode = ["up","up","down","down","left", "right", "left", "right", "b", "a"];
 
-    //variable ot set the position the user has reached so far.
-    let konamiCodePosition = 0;
+        konamiCode.push(e.key);
+        console.log(konamiCode, codeArray);
 
-    //add keydown event listener
-    document.addEventListener('keydown', function(e) {
-    // get the value of the key code from the key map.
-      let key = inputKeys[e.key];
-    //get the value of the required key from the konami code.
-      let requiredKey = konamiCode[konamiCodePosition];
-
-      //compare the key with the required key
-      if (key == requiredKey) {
-        //move to the next key in the konami code sequence
-        konamiCodePosition++;
-
-        //if the last key is reached, activate cheats.
-        if (konamiCodePosition === konamiCode.length) {
-          activateCheats();
-          konamiCodePosition = 0;
+        if (konamiCode.join("") === codeArray.join('')) {
+          konamiCode =[];
+          console.log("Cheats Activated");
+          alert("Cheats Activated!");
         }
-      } else {
-        konamiCodePosition = 0;
-      }
+        else if (konamiCode.length === codeArray.length ){
+          alert("Wrong code dude!");
+          konamiCode = [];
+        }
+
     });
 
-    function activateCheats(){
-      alert("cheats activated");
-    }
 
 
-    $(document).keyup(function(event){
-    console.log(event.keyCode);
-    });
     </script>
+
   </body>
 </html>
