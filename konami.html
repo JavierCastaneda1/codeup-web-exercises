@@ -14,12 +14,23 @@
 
 <body>
 <!--HEADING-->
-    <h1>Enter The Konami Code Now!</h1>
+    <h1>Enter The Konami Code using your arrow keys and letter keys!</h1>
 
-<!--GIF-->
-    <div id="gif-container" class="real-big">
+<!--RANDOM TEXT AREA FOR VISUAL (NO FUNCTIONALITY)-->
+    <textarea></textarea>
+
+<!--GIFS-->
+    <div id="gif-contra" class="real-big">
             <img src="img/konami-code-glove.gif" >
     </div>
+    <div id="gif-gordon">
+        <img src="img/gordon.gif" >
+
+    </div>
+
+<!--TEXT-->
+    <div id="textUnder" >Cheats Activated!</div>
+
 
 <!--BUTTON-->
     <button id="buttonPress">Try Again</button>
@@ -38,7 +49,10 @@
         let codeArray = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
 
         // HIDE GIF ON PAGE LOAD
-        $("#gif-container").hide();
+        $("#gif-contra").hide();
+        $("#gif-gordon").hide();
+        $("#textUnder").hide();
+
 
 
         //FUNCTION THAT TAKES KET INPUT
@@ -50,10 +64,10 @@
             if (konamiCode.join("") === codeArray.join('')) {
                 konamiCode =[];
                 console.log("Cheats Activated");
-                $('#gif-container').slideDown('slow');;
+                $('#gif-contra').slideDown('slow') && $("#textUnder").slideDown('slow)');
             }
             else if (konamiCode.length === codeArray.length ){
-                alert("Wrong code dude!");
+                $('#gif-gordon').slideDown('slow');
                 konamiCode = [];
             }
 
