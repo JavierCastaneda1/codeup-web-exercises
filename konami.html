@@ -1,30 +1,48 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Konami Code</title>
 
-<!--    //BootStrap CDN-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
+<!--BootStrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
 
 <body>
+<!--HEADING-->
+    <h1>Enter The Konami Code Now!</h1>
 
-    <h1>Konami Code</h1>
+<!--GIF-->
+    <div id="gif-container" class="real-big">
+            <img src="img/konami-code-glove.gif" >
+    </div>
 
-    <script
-        src="js/jquery.js">
-    </script>
+<!--BUTTON-->
+    <button id="buttonPress">Try Again</button>
+
+
+
+
+<!--JQUERY-->
+    <script src="js/jquery.js"></script>
+<!--EVENTLISTENER EXTERNAL-->
+    <script src="js/konami.js"></script>
 
     <script>
         "use strict";
         let konamiCode = [];
         let codeArray = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
 
-        $(document).keyup(function(e){
+        // HIDE GIF ON PAGE LOAD
+        $("#gif-container").hide();
 
+
+        //FUNCTION THAT TAKES KET INPUT
+        $(document).keyup(function(e){
 
             konamiCode.push(e.key);
             console.log(konamiCode, codeArray);
@@ -32,7 +50,7 @@
             if (konamiCode.join("") === codeArray.join('')) {
                 konamiCode =[];
                 console.log("Cheats Activated");
-                alert("Cheats Activated!");
+                $('#gif-container').slideDown('slow');;
             }
             else if (konamiCode.length === codeArray.length ){
                 alert("Wrong code dude!");
@@ -42,5 +60,8 @@
         });
     </script>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
