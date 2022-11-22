@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("dl").click(function () {
+                $("dd").toggleClass("invisible");
+            });
+        });
+    </script>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
         .invisible{
             visibility: hidden;
         }
-
     </style>
 </head>
 <body>
@@ -15,7 +22,7 @@
 
     <dl>
         <dt>1. What government agency oversees the National Park Service?</dt>
-        <dd class="invisible">National Park Service</dd>
+        <dd class="invisible">the National Park Service</dd>
 
         <dt>2. What Is a National Park?</dt>
         <dd class="invisible">“A national park contains a variety of resources and encompasses large land or water areas to help provide adequate protection of resources.”</dd>
@@ -47,8 +54,5 @@
     </dl>
 
 
-
-
-    <script src="js/jquery.js"></script>
 </body>
 </html>
