@@ -19,7 +19,7 @@ $(document).keyup(function(e){
         console.log("Cheats Activated");
         $('#gif-contra').slideDown('slow') && $("#textUnder").slideDown('slow)');
     }
-    else if (konamiCode.length === codeArray.length ){
+    else if (konamiCode.length === codeArray.length){
         $('#gif-gordon').slideDown('slow');
         konamiCode = [];
     }
@@ -27,9 +27,16 @@ $(document).keyup(function(e){
 });
 
 $(document).ready(function(){
+    $(".radio-btn").click(function(){
+        $(".radio-inner").toggleClass("active");
+        $("body").toggleClass("dark");
+    })
+
+
     $("button").click(function(){
         location.reload(true);
     });
+
 })
 
 
