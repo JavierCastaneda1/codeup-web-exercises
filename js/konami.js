@@ -37,6 +37,7 @@ $(document).ready(function(){
         location.reload(true);
     });
 
+    $(`h1`).addClass(`highlight`)
 })
 
 
