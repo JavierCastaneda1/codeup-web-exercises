@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ajax blog</title>
 </head>
 <body>
+
+    <div id="posts">
+
+    </div>
+    <button type="button" id="loadBlog">Load Blog</button>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+        (function () {
+            "use strict";
+
+            function getBlog() {
+                $.get("data/blog.json").done(function (data) {
+                    console.log(data);
+                    data.forEach(function (item) {
+                        $('#posts').append('<p>' + item.title + '</p><p>' + item.content + '</p><p>' + item.categories.join(' ') + '</p><p>' + item.date + '</p><br>')
+                    })
+                });
+            }
+            getBlog();
+            $("#loadBlog").on('click', function(){
+                $("#posts").html('');
+                getBlog();
+            });
+        })();
+    </script>
+
 
 </body>
 </html>

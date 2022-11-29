@@ -32,30 +32,11 @@
         $.get("data/inventory.json").done(function(data) {
             console.log(data);
         });
-
-
+    })();
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
-    })();
-
-
-
-
-
-    // $(document).ready(function(){
-    //
-    //     $("button").click(function(){
-    //         $.get("data/inventory.json", function(data, status){
-    //             $("#load-btn").html(data);
-    //             alert(status);
-    //         })
-    //     });
-    //
-    // });
-
-
 
     (function() {
         "use strict";
@@ -73,6 +54,13 @@
 
     })();
 
+        // $.get("data/inventory.json").done(function (data){
+        //     for(let i=0; i<data.length; i++){
+        //         let row=$('<tr><td>' + data[i].title + '</td><td>' + data[i].quantity + '</td><td>' + data[i].price + '</td><td>' + data[i].categories + '</td></tr>');
+        //         $('#insertProducts').append(row);
+        //     }
+        //     console.log((data));
+        // });
 
 
 
