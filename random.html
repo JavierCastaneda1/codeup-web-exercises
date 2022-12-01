@@ -6,16 +6,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/random.css"/>
+    <script src="js/keys.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { width: 100%; height: 400px; }
+    </style>
 </head>
 <body>
 
-    <button id="submitButton">Press to make stuff pink! (after 3 seconds)</button>
+    <button class="pinkButton">Press to make stuff pink! (after 3 seconds)</button>
     <h1 class="disFont">Skateboard Trucks</h1>
     <div class="container">
-        <div id="specDiv">Ace Trucks</div>
-        <div id="godDiv">Independent Trucks</div>
+        <div id="aceDiv">Ace Trucks</div>
+        <div id="specDiv">Independent Trucks</div>
         <div>Krux Trucks</div>
         <div>Thunder Trucks</div>
         <div>Venture Trucks</div>
@@ -23,38 +27,45 @@
 
     <hr>
 
-    <div class="containerTwo">
-        <div id="specDivTwo"><img class="img" src="img/acetrucks.webp"></div>
-        <div id="godDivTwo">Independent Trucks</div>
-        <div>Krux Trucks</div>
-        <div>Thunder Trucks</div>
-        <div>Venture Trucks</div>
+    <div class="acePara">
+        <img class="img" src="img/acetrucks.webp">
+        Ace Trucks! Known for their legendary turn and durability! Great choice for street and bowl skating.
     </div>
 
-
-    <p><span id="counter">0</span> seconds on the page</p>
-
-
-
-    <p id="godPara">
-        God help us, we're in the hands of engineers. This thing comes fully loaded. AM/FM radio, reclining bucket
-        seats, and... power windows. So you two dig up, dig up dinosaurs? Just my luck, no ice. Is this my espresso
-        machine? Wh-what is-h-how did you get my espresso machine?
-    </p>
-
-    <p id="special">
+    <p class="special">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi, deleniti dignissimos dolor eius fuga in iste, itaque labore laudantium, minus molestias odio praesentium repudiandae voluptatum. Dicta dolorem doloremque recusandae!
     </p>
 
-    <p>
-        dfasdfasdfasdfasdfklk  ;lka d;lfk ;'lk asd;l'fk ';lak sd';lfk a;'lsdkf ;'lakds f;'lkas d;lf'ka';sldkf ;'dslkf a;s'lk
-    </p>
 
-    <p>
-        fadsf;l;l'k;l'k ;l'k ;lk;lk;lk;lk444;lk4;lk4;l4k4;lk;4lk4;lk4;lk4;lk4;lk4;l'k4;lk4'l;k4;lk4;l'k4
-    </p>
+
+<!--POKEMON API -->
+    <div id="pic-frame"></div>
+
+    <input type="text" id="poke-name">
+
+    <button class="pokeBtn">Search for Pokémon</button>
+
+
 
 <script src="js/jquery.js"></script>
 <script src="js/random.js"></script>
+    <script>
+        $.ajax('https://pokeapi.co/api/v2/pokemon/charmander').done(function(data) {
+            console.log(data);
+        });
+
+        $(".pokeBtn").click(function () {
+            $("#pic-frame").html("<img src='img/pixel-art.gif' alt='loading'>");
+            let query = $("#poke-name").val();
+            $.get("https://pokeapi.co/api/v2/pokemon/" + query).done(function(data) {
+                console.log(data);
+                $("#pic-frame").html("<img src='"+ data.sprites.front_default +"' alt='Pokéfriend'>");
+            }).fail(function() {
+                $("#pic-frame").html("<div>We're sorry, but your request could not be completed. \"" + query + "\" is not a Pokémon.</div>");
+            }).always(function() {
+                $("#pic-frame").append("<div>Request to API complete.</div>");
+            });
+        });
+    </script>
 </body>
 </html>

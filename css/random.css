@@ -1,8 +1,13 @@
-button {
+.pinkButton {
     color: black;
     background-color: white;
     border:solid gray 20px;
     font-family: 'Rubik Distressed', cursive;
+}
+
+.containerTwo {
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -44,7 +49,6 @@ p{
 }
 
 div{
-    /*background: #ffb53f;*/
     text-align: center;
     padding: 1rem 2rem;
     margin: 0 0 1rem 0;
@@ -52,10 +56,7 @@ div{
 }
 
 img {
-
     height: auto;
     max-width: 25%;
-
-
 }
 
