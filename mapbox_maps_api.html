@@ -46,7 +46,7 @@
 
 
 
-    geocode("6710 Loma Corona, San Antonio, TX 78205", mapboxKey).then(function(result) {
+    geocode("8601 S Congress Ave Suite 200, Austin, TX 78745", mapboxKey).then(function(result) {
         console.log(result);
         map.setCenter(result);
         map.setZoom(20);
@@ -54,7 +54,7 @@
     }).then(function(result){
         let popup = new mapboxgl.Popup()
             .setLngLat(result)
-            .setHTML("<p>This is my home!</p>")   //don't forget to use the p tags!
+            .setHTML("<p>This is my favorite restaurant, Ramen Tatsuya</p>")   //don't forget to use the p tags!
             .addTo(map)
         let alamoPopup = new mapboxg1.Popup()
             .setHTML("<p>Remember the Alamo</p>")
