@@ -27,40 +27,49 @@
     (function() {
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
+            function getInventory() {
+                $.get("data/inventory.json").done(function(data){
+                    let htmlStr = "";
+                    data.forEach(function(tool) {
+                        htmlStr += "<tr>";
+                        htmlStr += "<td>" + tool.title + "</td>";
+                        htmlStr += "<td>" + tool.quantity + "</td>";
+                        htmlStr += "<td>" + tool.price.toFixed(2) + "</td>";
+                        htmlStr += "<td>" + tool.categories.join(", ") + "</td>";
+                        htmlStr += "</tr>";
 
-
-        $.get("data/inventory.json").done(function(data) {
-            console.log(data);
-        });
+                    })
+                    $("#insertProducts").html(htmlStr);
+                })
+            }
+        $("#refresh-btn").click(getInventory);
+        getInventory();
+    //     $.get("data/inventory.json").done(function(data) {
+    //         console.log(data);
+    //     });
     })();
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    (function() {
-        "use strict";
-        $.get("data/inventory.json", function (inventory){
-            console.log(inventory);
-            $.each(inventory, function (index, tool){
-                $("#insertProducts").append("<tr>" +
-                    "<td>" + tool.title + "</td>" +
-                    "<td>" + tool.quantity + "</td>" +
-                    "<td>" + tool.price + "</td>" +
-                    "<td>" + tool.categories.join(", ") + "</td>" +
-                    "</tr>");
-            });
-        });
+    // (function() {
+    //     "use strict";
+    //     $.get("data/inventory.json", function (inventory){
+    //         console.log(inventory);
+    //         $.each(inventory, function (index, tool){
+    //             $("#insertProducts").append("<tr>" +
+    //                 "<td>" + tool.title + "</td>" +
+    //                 "<td>" + tool.quantity + "</td>" +
+    //                 "<td>" + tool.price + "</td>" +
+    //                 "<td>" + tool.categories.join(", ") + "</td>" +
+    //                 "</tr>");
+    //         });
+    //     });
+    //
+    // })();
 
-    })();
 
-        // $.get("data/inventory.json").done(function (data){
-        //     for(let i=0; i<data.length; i++){
-        //         let row=$('<tr><td>' + data[i].title + '</td><td>' + data[i].quantity + '</td><td>' + data[i].price + '</td><td>' + data[i].categories + '</td></tr>');
-        //         $('#insertProducts').append(row);
-        //     }
-        //     console.log((data));
-        // });
 
 
 
