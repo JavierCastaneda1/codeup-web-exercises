@@ -20,6 +20,9 @@ html {
     box-sizing: border-box;
 }
 
+#blueButton {
+    color:black;
+}
 
 body {
     font-family: Verdana, sans-serif;

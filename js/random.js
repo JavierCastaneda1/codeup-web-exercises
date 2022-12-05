@@ -13,3 +13,9 @@ $(document).ready(function(){
     });
 
 });
+
+
+$("#blueButton").mouseenter(function(){
+    $(this).css("color", "hotpink")
+});
+
